@@ -38,12 +38,13 @@ public class Student extends Person {
     public static void manageTuition(Student s) {
         while (true) {
             System.out.print("Enter amount paid: ");
-            s.setAmountPaid(numberInput.nextFloat());
+            float paid = numberInput.nextFloat();
 
             // If less than 0 or greater than tuition, ask again
-            if (s.getAmountPaid() < 0 || s.getAmountPaid() > s.getTuition()) {
-                System.out.println("The amount paid must be 0-" + s.getTuition() + "!");
+            if (paid < 0 || paid > s.getRemainingBalance()) {
+                System.out.println("The amount paid must be 0-" + s.getRemainingBalance() + "!");
             } else {
+                s.setAmountPaid(paid + s.getAmountPaid());
                 break;
             }
         }
@@ -63,7 +64,7 @@ public class Student extends Person {
             System.out.println("[2] - Tuition Payment");
             System.out.println("[3] - Exit");
             System.out.print("Enter choice: ");
-            int choice = choice = numberInput.nextInt();
+            int choice = numberInput.nextInt();
             System.out.println("---------------------------");
             switch (choice) {
                 case 1:
