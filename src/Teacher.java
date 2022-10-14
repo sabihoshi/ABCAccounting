@@ -17,18 +17,6 @@ public class Teacher extends Person {
                 break;
             }
         }
-
-        while (true) {
-            System.out.print("Enter hours: ");
-            t.setHours(numberInput.nextInt());
-
-            // If less than 1 or greater than 40, ask again
-            if (t.getHours() < 1 || t.getHours() > 40) {
-                System.out.println("\nThe amount of hours must be 1-40!");
-            } else {
-                break;
-            }
-        }
     }
 
     /**
