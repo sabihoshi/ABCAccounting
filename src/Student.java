@@ -14,9 +14,9 @@ public class Student extends Person {
             System.out.print("Enter module count: ");
             s.setModuleCount(numberInput.nextInt());
 
-            // If less than 1 or greater than 6, ask again
-            if (s.getModuleCount() < 1 || s.getModuleCount() > 6) {
-                System.out.println("The amount of modules must be 1-6!");
+            // If less than 0 or greater than 6, ask again
+            if (s.getModuleCount() < 0 || s.getModuleCount() > 6) {
+                System.out.println("The amount of modules must be 0-6!");
             } else {
                 break;
             }
@@ -84,19 +84,8 @@ public class Student extends Person {
         return moduleCount;
     }
 
-    /**
-     * Sets the amount of modules the student is taking
-     *
-     * @param moduleCount the moduleCount to set
-     * @throws IllegalArgumentException if moduleCount is less than 0 or greater than 6
-     */
     public void setModuleCount(int moduleCount) {
-        if (moduleCount < 0 || moduleCount > 6) {
-            System.out.println("The amount of modules must be 0 -6!");
-            throw new IllegalArgumentException();
-        } else {
-            this.moduleCount = moduleCount;
-        }
+        this.moduleCount = moduleCount;
     }
 
     public int getModuleRepeat() {
