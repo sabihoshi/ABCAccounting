@@ -1,0 +1,99 @@
+import java.util.Scanner;
+
+public class Person {
+    protected static final Scanner numberInput = new Scanner(System.in);
+    protected static final Scanner stringInput = new Scanner(System.in);
+
+    private int id;
+    private String firstName;
+    private String lastName;
+    private String gender;
+    private Long phoneNumber;
+    private String address;
+
+    protected static void setPersonDetails(Person p) {
+        while (true) {
+            System.out.print("Enter ID: ");
+            p.setId(numberInput.nextInt());
+
+            // If one of the people has this ID, try again
+            if (Main.people.stream().anyMatch(s -> s.getId() == p.getId())) {
+                System.out.println("Student with this ID already exists!");
+            } else {
+                break;
+            }
+        }
+
+        System.out.print("Enter first name: ");
+        p.setFirstName(stringInput.nextLine());
+
+        System.out.print("Enter last name: ");
+        p.setLastName(stringInput.nextLine());
+
+        System.out.print("Enter gender: ");
+        p.setGender(stringInput.nextLine());
+
+        System.out.print("Enter phone number: ");
+        p.setPhoneNumber(numberInput.nextLong());
+
+        System.out.print("Enter address: ");
+        p.setAddress(stringInput.nextLine());
+    }
+
+    public void printPersonDetails() {
+        // Use System.out.printf and align output properly
+        System.out.printf("ID:           %d", id);
+        System.out.printf("First Name:   %s", firstName);
+        System.out.printf("Last Name:    %s", lastName);
+        System.out.printf("Phone Number: %d", phoneNumber);
+        System.out.printf("Address:      %s", address);
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public Long getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(Long phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+}
