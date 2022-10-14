@@ -49,7 +49,7 @@ public class Student extends Person {
         }
 
         System.out.println("Tuition paid successfully!");
-        System.out.println("Remaining balance: " + s.getTuition());
+        System.out.println("Remaining balance: " + s.getRemainingBalance());
     }
 
     public float getRemainingBalance() {

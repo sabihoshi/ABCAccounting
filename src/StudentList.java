@@ -81,7 +81,7 @@ public class StudentList {
         students.forEach(student -> System.out.printf("%-8d | %-31s | %-6s | %-7.2f | %-7.2f | %-7d | %-7d | %-12d | %-31s%n",
                 student.getId(),
                 student.getFirstName() + " " + student.getLastName(), student.getGender(),
-                student.getAmountPaid(), student.getTuition(),
+                student.getRemainingBalance(), student.getTuition(),
                 student.getModuleCount(), student.getModuleRepeat(),
                 student.getPhoneNumber(), student.getAddress()));
     }
