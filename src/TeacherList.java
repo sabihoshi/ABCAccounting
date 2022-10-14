@@ -3,11 +3,13 @@ import java.util.stream.Stream;
 
 public class TeacherList {
     protected final Scanner numberInput = new Scanner(System.in);
-    protected final Scanner stringInput = new Scanner(System.in);
 
     public void menu() {
         while (true) {
-            System.out.println("--------Teacher Menu--------");
+            System.out.println("----------------------------------------------");
+            System.out.println("                Teacher Menu                  ");
+            System.out.println("----------------------------------------------");
+
             System.out.println("[1] - Add new teacher");
             System.out.println("[2] - Update teacher");
             System.out.println("[3] - Delete teacher");
@@ -17,26 +19,31 @@ public class TeacherList {
             System.out.print("Enter choice: ");
             int choice = numberInput.nextInt();
 
-            System.out.println("----------------------------");
+            System.out.println("----------------------------------------------");
             switch (choice) {
                 case 1:
-                    System.out.println("Add new teacher");
+                    System.out.println("                Add new teacher               ");
+                    System.out.println("----------------------------------------------");
                     addTeacher();
                     break;
                 case 2:
-                    System.out.println("Update teacher");
+                    System.out.println("                Update teacher                ");
+                    System.out.println("----------------------------------------------");
                     updateTeacher();
                     break;
                 case 3:
-                    System.out.println("Delete teacher");
+                    System.out.println("                Delete teacher                ");
+                    System.out.println("----------------------------------------------");
                     deleteTeacher();
                     break;
                 case 4:
-                    System.out.println("Calculate salary of a teacher");
+                    System.out.println("         Calculate salary of a teacher        ");
+                    System.out.println("----------------------------------------------");
                     calculateSalary();
                     break;
                 case 5:
-                    System.out.println("Show all teachers");
+                    System.out.println("              Show all teachers               ");
+                    System.out.println("----------------------------------------------");
                     showAllTeachers();
                     break;
                 case 6:

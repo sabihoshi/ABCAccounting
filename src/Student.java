@@ -59,18 +59,26 @@ public class Student extends Person {
 
     public void manageStudent() {
         while (true) {
-            System.out.println("--------Student Management--------");
+            System.out.println("----------------------------------------------");
+            System.out.println("             Student Management               ");
+            System.out.println("----------------------------------------------");
+
             System.out.println("[1] - Encode New / Repeated Modules");
             System.out.println("[2] - Tuition Payment");
             System.out.println("[3] - Exit");
             System.out.print("Enter choice: ");
             int choice = numberInput.nextInt();
-            System.out.println("---------------------------");
+
+            System.out.println("----------------------------------------------");
             switch (choice) {
                 case 1:
+                    System.out.println("       Encode New / Repeated Modules          ");
+                    System.out.println("----------------------------------------------");
                     manageModules(this);
                     break;
                 case 2:
+                    System.out.println("                 Tuition Payment              ");
+                    System.out.println("----------------------------------------------");
                     manageTuition(this);
                     break;
                 case 3:

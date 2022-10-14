@@ -41,15 +41,6 @@ public class Person {
         p.setAddress(stringInput.nextLine());
     }
 
-    public void printPersonDetails() {
-        // Use System.out.printf and align output properly
-        System.out.printf("ID:           %d", id);
-        System.out.printf("First Name:   %s", firstName);
-        System.out.printf("Last Name:    %s", lastName);
-        System.out.printf("Phone Number: %d", phoneNumber);
-        System.out.printf("Address:      %s", address);
-    }
-
     public int getId() {
         return id;
     }

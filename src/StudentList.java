@@ -7,7 +7,10 @@ public class StudentList {
 
     public void menu() {
         while (true) {
-            System.out.println("--------Student Menu--------");
+            System.out.println("----------------------------------------------");
+            System.out.println("                Student Menu                  ");
+            System.out.println("----------------------------------------------");
+
             System.out.println("[1] - Add new student");
             System.out.println("[2] - Update student");
             System.out.println("[3] - Delete student");
@@ -19,34 +22,41 @@ public class StudentList {
             System.out.print("Enter choice: ");
             int choice = numberInput.nextInt();
 
-            System.out.println("----------------------------");
+            System.out.println("----------------------------------------------");
             switch (choice) {
                 case 1:
-                    System.out.println("Add new student");
+                    System.out.println("                Add new student               ");
+                    System.out.println("----------------------------------------------");
                     addStudent();
                     break;
                 case 2:
-                    System.out.println("Update student");
+                    System.out.println("                Update student                ");
+                    System.out.println("----------------------------------------------");
                     updateStudent();
                     break;
                 case 3:
-                    System.out.println("Delete student");
+                    System.out.println("                Delete student                ");
+                    System.out.println("----------------------------------------------");
                     deleteStudent();
                     break;
                 case 4:
-                    System.out.println("Show remaining balance");
+                    System.out.println("            Show remaining balance            ");
+                    System.out.println("----------------------------------------------");
                     showBalance();
                     break;
                 case 5:
-                    System.out.println("Fee deposit");
+                    System.out.println("                Fee deposit                   ");
+                    System.out.println("----------------------------------------------");
                     feeDeposit();
                     break;
                 case 6:
-                    System.out.println("Display all student with zero balance");
+                    System.out.println("    Display all student with zero balance     ");
+                    System.out.println("----------------------------------------------");
                     displayZeroBalance();
                     break;
                 case 7:
-                    System.out.println("Display all student with non - zero balance");
+                    System.out.println(" Display all student with non - zero balance  ");
+                    System.out.println("----------------------------------------------");
                     displayNonZeroBalance();
                     break;
                 case 8:

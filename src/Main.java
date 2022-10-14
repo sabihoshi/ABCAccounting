@@ -11,7 +11,9 @@ public class Main {
     public static void main(String[] args) {
         boolean repeat = true;
         while (repeat) {
-            System.out.println("--------Menu--------");
+            System.out.println("-------------------");
+            System.out.println("     Main Menu     ");
+            System.out.println("-------------------");
             System.out.println("[1] Manage Students");
             System.out.println("[2] Manage Teachers");
             System.out.println("[3] Exit");
