@@ -22,27 +22,27 @@ public class TeacherList {
             System.out.println("----------------------------------------------");
             switch (choice) {
                 case 1:
-                    System.out.println("                Add new teacher               ");
+                    System.out.println("                Add New Teacher               ");
                     System.out.println("----------------------------------------------");
                     addTeacher();
                     break;
                 case 2:
-                    System.out.println("                Update teacher                ");
+                    System.out.println("                Update Teacher                ");
                     System.out.println("----------------------------------------------");
                     updateTeacher();
                     break;
                 case 3:
-                    System.out.println("                Delete teacher                ");
+                    System.out.println("                Delete Teacher                ");
                     System.out.println("----------------------------------------------");
                     deleteTeacher();
                     break;
                 case 4:
-                    System.out.println("         Calculate salary of a teacher        ");
+                    System.out.println("         Calculate Salary of a Teacher        ");
                     System.out.println("----------------------------------------------");
                     calculateSalary();
                     break;
                 case 5:
-                    System.out.println("              Show all teachers               ");
+                    System.out.println("              Show All Teachers               ");
                     System.out.println("----------------------------------------------");
                     showAllTeachers();
                     break;
