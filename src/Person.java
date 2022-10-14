@@ -14,12 +14,13 @@ public class Person {
     protected static void setPersonDetails(Person p) {
         while (true) {
             System.out.print("Enter ID: ");
-            p.setId(numberInput.nextInt());
+            int id = numberInput.nextInt();
 
             // If one of the people has this ID, try again
-            if (Main.people.stream().anyMatch(s -> s.getId() == p.getId())) {
+            if (Main.people.stream().anyMatch(s -> s.getId() == id)) {
                 System.out.println("Student with this ID already exists!");
             } else {
+                p.setId(id);
                 break;
             }
         }
