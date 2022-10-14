@@ -39,8 +39,10 @@ public enum Designation {
      */
     public float getSalary(int hours) {
         int overtime = Math.max(hours - teachingHours(), 0);
+        int regular = hours - overtime;
+
         float overtimePay = overtime * 325f;
-        float totalSalary = baseSalary + overtimePay;
+        float totalSalary = (baseSalary / regular) + overtimePay;
 
         return totalSalary
                 + getHousingAllowance(totalSalary)
