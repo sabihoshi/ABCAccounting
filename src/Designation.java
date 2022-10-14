@@ -38,7 +38,7 @@ public enum Designation {
      * @return The salary of the teacher
      */
     public float getSalary(int hours) {
-        int overtime = teachingHours() - hours;
+        int overtime = Math.max(hours - teachingHours(), 0);
         float overtimePay = overtime * 325f;
         float totalSalary = baseSalary + overtimePay;
 
