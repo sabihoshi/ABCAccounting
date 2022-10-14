@@ -10,7 +10,7 @@ public class Teacher extends Person {
             String designation = stringInput.nextLine();
 
             // If not HOF, CO, or L, ask again
-            if (!designation.equals("HOF") && !designation.equals("CO") && !designation.equals("L")) {
+            if (!designation.equalsIgnoreCase("HOF") && !designation.equalsIgnoreCase("CO") && !designation.equalsIgnoreCase("L")) {
                 System.out.println("Invalid designation!");
             } else {
                 t.setDesignation(Designation.getDesignation(designation));
