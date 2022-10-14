@@ -13,7 +13,7 @@ public class Person {
 
     protected static void setPersonDetails(Person p) {
         while (true) {
-            System.out.print("Enter ID: ");
+            System.out.print("Enter new ID: ");
             int id = numberInput.nextInt();
 
             // If one of the people has this ID, try again
