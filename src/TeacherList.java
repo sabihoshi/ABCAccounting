@@ -61,7 +61,7 @@ public class TeacherList extends StudentList {
     private void displayTeachers(Stream<Teacher> teachers) {
         System.out.println("ID       | Name                            | Gender | Designation | Phone Number | Address                         ");
         System.out.println("---------+---------------------------------+--------+-------------+--------------+---------------------------------");
-        teachers.forEach(teacher -> System.out.printf("%-9s | %-31s | %-6s | %-11s | %-12s | %-31s%n",
+        teachers.forEach(teacher -> System.out.printf("%-8s | %-31s | %-6s | %-11s | %-12s | %-31s%n",
                 teacher.getId(), teacher.getFirstName() + " " + teacher.getLastName(),
                 teacher.getGender(), teacher.getDesignation(),
                 teacher.getPhoneNumber(), teacher.getAddress()));
