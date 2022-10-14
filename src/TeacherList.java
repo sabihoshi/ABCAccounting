@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.stream.Stream;
 
-public class TeacherList {
+public class TeacherList extends StudentList {
     protected final Scanner numberInput = new Scanner(System.in);
 
     public void menu() {
