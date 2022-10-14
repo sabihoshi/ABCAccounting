@@ -48,12 +48,7 @@ public class TeacherList {
     }
 
     private void showAllTeachers() {
-        Stream<Teacher> teacherStream = Main.people.stream().filter(person -> person instanceof Teacher).map(person -> (Teacher) person);
-        if (teacherStream.findAny().isPresent()) {
-            displayTeachers(teacherStream);
-        } else {
-            System.out.println("No teachers found");
-        }
+        displayTeachers(Main.people.stream().filter(person -> person instanceof Teacher).map(person -> (Teacher) person));
     }
 
     private void displayTeachers(Stream<Teacher> teachers) {
