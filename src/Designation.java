@@ -17,7 +17,7 @@ public enum Designation {
     private static final float baseSalary = 1200.00f;
 
     public static Designation getDesignation(String designation) {
-        switch (designation) {
+        switch (designation.toUpperCase()) {
             case "HOF":
                 return HeadOfFaculty;
             case "CO":
