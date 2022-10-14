@@ -11,7 +11,7 @@ public class Teacher extends Person {
 
             // If not HOF, CO, or L, ask again
             if (!designation.equalsIgnoreCase("HOF") && !designation.equalsIgnoreCase("CO") && !designation.equalsIgnoreCase("L")) {
-                System.out.println("Invalid designation!");
+                System.out.println("\nInvalid designation!");
             } else {
                 t.setDesignation(Designation.getDesignation(designation));
                 break;
@@ -24,7 +24,7 @@ public class Teacher extends Person {
 
             // If less than 1 or greater than 40, ask again
             if (t.getHours() < 1 || t.getHours() > 40) {
-                System.out.println("The amount of hours must be 1-40!");
+                System.out.println("\nThe amount of hours must be 1-40!");
             } else {
                 break;
             }

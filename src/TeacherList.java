@@ -74,7 +74,7 @@ public class TeacherList extends StudentList {
         int hours = numberInput.nextInt();
 
         double salary = teacher.getSalary(hours);
-        System.out.printf("Salary of %s is %.2f%n", teacher.getFirstName() + " " + teacher.getLastName(), salary);
+        System.out.printf("\nSalary of %s is %.2f%n", teacher.getFirstName() + " " + teacher.getLastName(), salary);
     }
 
     private Teacher findTeacher() {
@@ -87,7 +87,7 @@ public class TeacherList extends StudentList {
                     return (Teacher) person;
                 }
             }
-            System.out.println("Teacher not found");
+            System.out.println("\nTeacher not found");
         }
     }
 

@@ -62,7 +62,7 @@ public class StudentList {
                 case 8:
                     return;
                 default:
-                    System.out.println("Invalid choice");
+                    System.out.println("\nInvalid choice");
             }
         }
     }
@@ -122,13 +122,13 @@ public class StudentList {
                     return (Student) person;
                 }
             }
-            System.out.println("Student not found");
+            System.out.println("\nStudent not found");
         }
     }
 
     public void showBalance() {
         Student student = findStudent();
-        System.out.println("Remaining balance: " + student.getRemainingBalance());
+        System.out.println("\nRemaining balance: " + student.getRemainingBalance());
     }
 
     public void deleteStudent() {

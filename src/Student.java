@@ -16,7 +16,7 @@ public class Student extends Person {
 
             // If less than 0 or greater than 6, ask again
             if (s.getModuleCount() < 0 || s.getModuleCount() > 6) {
-                System.out.println("The amount of modules must be 0-6!");
+                System.out.println("\nThe amount of modules must be 0-6!");
             } else {
                 break;
             }
@@ -28,7 +28,7 @@ public class Student extends Person {
 
             // If less than 0 or greater than 2 or the amount of modules, ask again
             if (s.getModuleRepeat() < 0 || s.getModuleRepeat() > 2 || s.getModuleRepeat() > s.getModuleCount()) {
-                System.out.println("The amount of modules repeated must be 0-2 and less than the amount of modules!");
+                System.out.println("\nThe amount of modules repeated must be 0-2 and less than the amount of modules!");
             } else {
                 break;
             }
@@ -42,14 +42,14 @@ public class Student extends Person {
 
             // If less than 0 or greater than tuition, ask again
             if (paid < 0 || paid > s.getRemainingBalance()) {
-                System.out.println("The amount paid must be 0-" + s.getRemainingBalance() + "!");
+                System.out.println("\nThe amount paid must be 0-" + s.getRemainingBalance() + "!");
             } else {
                 s.setAmountPaid(paid + s.getAmountPaid());
                 break;
             }
         }
 
-        System.out.println("Tuition paid successfully!");
+        System.out.println("\nTuition paid successfully!");
         System.out.println("Remaining balance: " + s.getRemainingBalance());
     }
 
@@ -84,7 +84,7 @@ public class Student extends Person {
                 case 3:
                     return;
                 default:
-                    System.out.println("Invalid choice");
+                    System.out.println("\nInvalid choice");
             }
         }
     }

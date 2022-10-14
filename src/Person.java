@@ -18,7 +18,7 @@ public class Person {
 
             // If one of the people has this ID, try again
             if (Main.people.stream().anyMatch(s -> s.getId() == id)) {
-                System.out.println("Student with this ID already exists!");
+                System.out.println("\nStudent with this ID already exists!");
             } else {
                 p.setId(id);
                 break;
