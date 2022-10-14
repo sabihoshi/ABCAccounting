@@ -30,6 +30,7 @@ public class Main {
                 case 3:
                     System.out.println("\nProgram terminated!");
                     repeat = false;
+                    break;
                 default:
                     System.out.println("\nInvalid choice");
             }
