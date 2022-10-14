@@ -76,12 +76,14 @@ public class StudentList {
     }
 
     private void displayStudents(Stream<Student> students) {
-        System.out.println("ID       | Name                            | Balance | Tuition | Modules | Repeats");
-        System.out.println("----------------------------------------------------------------------------");
-        students.forEach(student -> System.out.printf("%-8d | %-30s | %-7.2f | %-7.2f | %-7d | %-7d%n",
-                student.getId(), student.getFirstName() + " " + student.getLastName(),
+        System.out.println("ID       | Name                            | Gender | Balance | Tuition | Modules | Repeats | Phone Number | Address                         ");
+        System.out.println("---------+---------------------------------+--------+---------+---------+---------+---------+--------------+---------------------------------");
+        students.forEach(student -> System.out.printf("%-8d | %-31s | %-6s | %-7.2f | %-7.2f | %-7d | %-7d | %-12d | %-31s%n",
+                student.getId(),
+                student.getFirstName() + " " + student.getLastName(), student.getGender(),
                 student.getAmountPaid(), student.getTuition(),
-                student.getModuleCount(), student.getModuleRepeat()));
+                student.getModuleCount(), student.getModuleRepeat(),
+                student.getPhoneNumber(), student.getAddress()));
     }
 
     private void feeDeposit() {
