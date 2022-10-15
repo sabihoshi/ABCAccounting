@@ -42,7 +42,7 @@ public enum Designation {
         int regular = hours - overtime;
 
         float overtimePay = overtime * 325f;
-        float totalSalary = (baseSalary / regular) + overtimePay;
+        float totalSalary = (baseSalary * (regular / teachingHours())) + overtimePay;
 
         return totalSalary
                 + getHousingAllowance(totalSalary)
