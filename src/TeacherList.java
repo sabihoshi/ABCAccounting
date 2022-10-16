@@ -55,15 +55,19 @@ public class TeacherList {
     }
 
     private void showAllTeachers() {
-        displayTeachers(Main.people.stream().filter(person -> person instanceof Teacher).map(person -> (Teacher) person));
+        Stream<Teacher> teachers = Main.people.stream()
+                .filter(person -> person instanceof Teacher)
+                .map(person -> (Teacher) person);
+
+        displayTeachers(teachers);
     }
 
     private void displayTeachers(Stream<Teacher> teachers) {
-        System.out.println("ID       | Name                            | Gender | Designation     | Phone Number | Address                         ");
-        System.out.println("---------+---------------------------------+--------+-----------------+--------------+---------------------------------");
-        teachers.forEach(teacher -> System.out.printf("%-8s | %-31s | %-6s | %-15s | %-12s | %-31s%n",
+        System.out.println("ID       | Name                            | Gender | Department | Designation     | Phone Number | Address                         ");
+        System.out.println("---------+---------------------------------+--------+------------+-----------------+--------------+---------------------------------");
+        teachers.forEach(teacher -> System.out.printf("%-8s | %-31s | %-6s | %-10s | %-15s | %-12s | %-31s\n",
                 teacher.getId(), teacher.getFirstName() + " " + teacher.getLastName(),
-                teacher.getGender(), teacher.getDesignation(),
+                teacher.getGender(), teacher.getDepartment(), teacher.getDesignation(),
                 teacher.getPhoneNumber(), teacher.getAddress()));
     }
 
