@@ -78,7 +78,7 @@ public class TeacherList {
         int hours = numberInput.nextInt();
 
         double salary = teacher.getSalary(hours);
-        System.out.printf("\nSalary of %s is %.2f\n", teacher.getFirstName() + " " + teacher.getLastName(), salary + "\n");
+        System.out.printf("\nSalary of %s is %.2f\n\n", teacher.getFirstName() + " " + teacher.getLastName(), salary);
     }
 
     private Teacher findTeacher() {
