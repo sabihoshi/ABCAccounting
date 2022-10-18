@@ -75,6 +75,7 @@ public class Student extends Person {
                     System.out.println("       Encode New / Repeated Modules          ");
                     System.out.println("----------------------------------------------");
                     manageModules(this);
+                    System.out.println("\nThe modules has been updated!\n");
                     break;
                 case 2:
                     System.out.println("                 Tuition Payment              ");
