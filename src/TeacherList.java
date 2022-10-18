@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.util.stream.Stream;
 
 public class TeacherList {
-    protected final Scanner numberInput = new Scanner(System.in);
+    private final Scanner numberInput = new Scanner(System.in);
 
     public void menu() {
         while (true) {
