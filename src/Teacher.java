@@ -7,7 +7,8 @@ public class Teacher extends Person {
         setPersonDetails(t);
 
         // Enter department, it can only be business and computing
-        while (t.getDepartment() == null) {
+        Boolean repeat = true;
+        while (repeat) {
             System.out.print("Enter department (Business or Computing)): ");
             String department = stringInput.nextLine();
 
@@ -15,9 +16,11 @@ public class Teacher extends Person {
             switch (department.toUpperCase()) {
                 case "BUSINESS":
                     t.setDepartment("Business");
+                    repeat = false;
                     break;
                 case "COMPUTING":
                     t.setDepartment("Computing");
+                    repeat = false;
                     break;
                 default:
                     System.out.println("\nInvalid department\n");
