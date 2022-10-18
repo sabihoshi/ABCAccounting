@@ -1,9 +1,8 @@
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Main {
-    public static final List<Person> people = new ArrayList<>();
+    public static final ArrayList<Person> people = new ArrayList<Person>(); 
     private static final Scanner input = new Scanner(System.in);
     private static final StudentList student = new StudentList();
     private static final TeacherList teacher = new TeacherList();
