@@ -8,7 +8,7 @@ public class Teacher extends Person {
 
         // Enter department, it can only be business and computing
         while (t.getDepartment() == null) {
-            System.out.print("Enter department: ");
+            System.out.print("Enter department (Business or Computing)): ");
             String department = stringInput.nextLine();
 
             // Use switch
@@ -20,7 +20,7 @@ public class Teacher extends Person {
                     t.setDepartment("Computing");
                     break;
                 default:
-                    System.out.println("\nInvalid department");
+                    System.out.println("\nInvalid department\n");
                     break;
             }
         }
@@ -31,7 +31,7 @@ public class Teacher extends Person {
 
             // If not HOF, CO, or L, ask again
             if (!designation.equalsIgnoreCase("HOF") && !designation.equalsIgnoreCase("CO") && !designation.equalsIgnoreCase("L")) {
-                System.out.println("\nInvalid designation!");
+                System.out.println("\nInvalid designation!\n");
             } else {
                 t.setDesignation(Designation.getDesignation(designation));
                 break;

@@ -49,7 +49,7 @@ public class TeacherList {
                 case 6:
                     return;
                 default:
-                    System.out.println("Invalid choice");
+                    System.out.println("Invalid choice\n");
             }
         }
     }
@@ -78,7 +78,7 @@ public class TeacherList {
         int hours = numberInput.nextInt();
 
         double salary = teacher.getSalary(hours);
-        System.out.printf("\nSalary of %s is %.2f\n", teacher.getFirstName() + " " + teacher.getLastName(), salary);
+        System.out.printf("\nSalary of %s is %.2f\n", teacher.getFirstName() + " " + teacher.getLastName(), salary + "\n");
     }
 
     private Teacher findTeacher() {
@@ -91,7 +91,7 @@ public class TeacherList {
                     return (Teacher) person;
                 }
             }
-            System.out.println("\nTeacher not found");
+            System.out.println("\nTeacher not found\n");
         }
     }
 

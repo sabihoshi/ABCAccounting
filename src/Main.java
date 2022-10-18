@@ -28,11 +28,11 @@ public class Main {
                     teacher.menu();
                     break;
                 case 3:
-                    System.out.println("\nProgram terminated!");
+                    System.out.println("\nProgram terminated!\n");
                     repeat = false;
                     break;
                 default:
-                    System.out.println("\nInvalid choice");
+                    System.out.println("\nInvalid choice\n");
             }
         }
     }
