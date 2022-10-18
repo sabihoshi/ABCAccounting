@@ -134,5 +134,6 @@ public class StudentList {
     public void deleteStudent() {
         Student student = findStudent();
         Main.people.remove(student);
+        System.out.println("\nStudent Information successfully deleted!\n");
     }
 }
