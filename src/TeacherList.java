@@ -98,6 +98,7 @@ public class TeacherList {
     private void deleteTeacher() {
         Teacher teacher = findTeacher();
         Main.people.remove(teacher);
+        System.out.println("\nTeacher deleted!\n");
     }
 
     private void updateTeacher() {
