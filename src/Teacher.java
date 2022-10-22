@@ -9,7 +9,7 @@ public class Teacher extends Person {
         // Enter department, it can only be business and computing
         Boolean repeat = true;
         while (repeat) {
-            System.out.print("Enter department (Business or Computing)): ");
+            System.out.print("Enter department (Business or Computing): ");
             String department = stringInput.nextLine();
 
             // Use switch

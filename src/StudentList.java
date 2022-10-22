@@ -94,6 +94,7 @@ public class StudentList {
                 student.getRemainingBalance(), student.getTuition(),
                 student.getModuleCount(), student.getModuleRepeat(),
                 student.getPhoneNumber(), student.getAddress()));
+        System.out.println("\n");
     }
 
     private void feeDeposit() {
@@ -106,10 +107,13 @@ public class StudentList {
         Student.setStudentDetails(student);
 
         Main.people.add(student);
+
+        System.out.print("\nSTUDENT ADDED SUCCESSFULLY!\n\n");
     }
 
     public void updateStudent() {
         Student.setStudentDetails(findStudent());
+        System.out.println("\nSTUDENT SUCCESSFULLY UPDATED!\n");
     }
 
     private Student findStudent() {
@@ -134,6 +138,6 @@ public class StudentList {
     public void deleteStudent() {
         Student student = findStudent();
         Main.people.remove(student);
-        System.out.println("\nStudent Information successfully deleted!\n");
+        System.out.println("\nSTUDENT INFORMATION SUCCESSFULLY DELETED!\n");
     }
 }

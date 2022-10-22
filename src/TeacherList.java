@@ -69,6 +69,7 @@ public class TeacherList {
                 teacher.getId(), teacher.getFirstName() + " " + teacher.getLastName(),
                 teacher.getGender(), teacher.getDepartment(), teacher.getDesignation(),
                 teacher.getPhoneNumber(), teacher.getAddress()));
+        System.out.print("\n");
     }
 
     private void calculateSalary() {
@@ -98,17 +99,19 @@ public class TeacherList {
     private void deleteTeacher() {
         Teacher teacher = findTeacher();
         Main.people.remove(teacher);
-        System.out.println("\nTeacher deleted!\n");
+        System.out.println("\nTEACHER SUCCESSFULLY DELETED!\n");
     }
 
     private void updateTeacher() {
         Teacher teacher = findTeacher();
         Teacher.setTeacherDetails(teacher);
+        System.out.println("\nTEACHER SUCCESSFULLY UPDATED!");
     }
 
     private void addTeacher() {
         Teacher teacher = new Teacher();
         Teacher.setTeacherDetails(teacher);
         Main.people.add(teacher);
+        System.out.println("\nTEACHER ADDED SUCCESSFULLY!");
     }
 }
